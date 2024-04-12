@@ -1,0 +1,22 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+
+                System.out.println("Введите стоимость приема:");
+                double cost = scanner.nextDouble();
+
+                System.out.println("Введите коэффициент сложности диагностики:");
+                double complexity = scanner.nextDouble();
+
+                System.out.println("Введите процент отчисления от стоимости приема на зарплату врача:");
+                double percentage = scanner.nextDouble();
+
+                double salary = cost * complexity * (percentage / 100);
+                salary = salary - (salary * 0.13);
+
+                System.out.println("Зарплата врача после вычета подоходного налога составляет: " + salary);
+            }
+}
